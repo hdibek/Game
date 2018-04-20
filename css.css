@@ -1,0 +1,13 @@
+input {
+    background-color: #949990;
+    color: white;
+}
+input:hover {
+    background-color: white;
+    color: #949990;
+    border: 2px solid #949990;
+}
+input{
+    width: 132px;
+    height:50px;
+}
