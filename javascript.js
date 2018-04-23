@@ -47,16 +47,20 @@ wateringcan.src = "resources/wateringcan.png";
 var wheelbarrow = new Image();
 wheelbarrow.src = "resources/wheelbarrow.png";
 
+var angelfish = new Image();
+angelfish.src = "resources/angelfish.png";
 var bluefish = new Image();
 bluefish.src = "resources/bluefish.png";
 var jellyfish = new Image();
 jellyfish.src = "resources/jellyfish.png";
-var mantaray = new Image();
-mantaray.src = "resources/mantaray.jpg";
 var seahorse = new Image();
 seahorse.src = "resources/seahorse.png";
 var seaturtle = new Image();
 seaturtle.src = "resources/seaturtle.png";
+var seaweed = new Image();
+seaweed.src = "resources/seaweed.png";
+var shell = new Image();
+shell.src = "resources/shell.png";
 var starfish = new Image();
 starfish.src = "resources/starfish.png";
 var submarine = new Image();
@@ -129,6 +133,7 @@ function Underwater(){
     ctx.fillStyle="#ffffff";
     ctx.fillRect(0,0,600,600);
     ctx.drawImage(underwater,0,0,600,450);
+    ctx.drawImage(seaweed,250,375,90,60);
     ctx.drawImage(bluefish,350,285,95,47);
     ctx.drawImage(seahorse,550,350,30,55);
     ctx.drawImage(starfish,225,425,38,20);
@@ -136,7 +141,8 @@ function Underwater(){
     ctx.drawImage(whale,325,30,240,136);
     ctx.drawImage(jellyfish,500,300,60,46);
     ctx.drawImage(seaturtle,125,225,96,72);
-    ctx.drawImage(mantaray,250,400,90,36);
+    ctx.drawImage(shell,175,375,60,37);
+    ctx.drawImage(angelfish,275,200,60,84);
     ctx.font = "30px Arial";
     ctx.fillStyle = "#000000";
     ctx.fillText("Find These Items:",0,473);
@@ -172,12 +178,12 @@ function playGarden(){
 
 }
 function playUnderwater(){
-    var bedroomitems = ["blue flower" , "dog" , "doghouse" , "gloves" , "pink flowers" , "blue potted flowers" , "sunflowers" , "tree" , "waateringcan" , "wheelbarrow"];
+    var underwateritems = ["angelfish" , "blue fish" , "jellyfish" , "seahorse" , "sea turtle" , "seaweed" , "shell" , "starfish" , "submarine" , "can"];
     var gameitems = [];
     for (i=0 ; i<6 ; i++ ){
-        var bnum = Math.floor(Math.random() * bedroomitems.length);
+        var bnum = Math.floor(Math.random() * underwateritems.length);
         gameitems.add(bnum);
-        bedroomitems.remove(bedroomitems[bnum]);
+        underwateritems.remove(underwateritems[bnum]);
     }
     var ctx = document.getElementById("myCanvas").getContext("2d");
     ctx.font = "30px Arial";
