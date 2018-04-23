@@ -49,8 +49,23 @@ wheelbarrow.src = "resources/wheelbarrow.png";
 
 var bluefish = new Image();
 bluefish.src = "resources/bluefish.png";
+var jellyfish = new Image();
+jellyfish.src = "resources/jellyfish.png";
+var mantaray = new Image();
+mantaray.src = "resources/mantaray.jpg";
+var seahorse = new Image();
+seahorse.src = "resources/seahorse.png";
+var seaturtle = new Image();
+seaturtle.src = "resources/seaturtle.png";
+var starfish = new Image();
+starfish.src = "resources/starfish.png";
+var submarine = new Image();
+submarine.src = "resources/submarine.png";
 var underwater = new Image();
 underwater.src = "resources/underwater.png";
+var whale = new Image();
+whale.src = "resources/whale.png";
+
 
 
 
@@ -114,11 +129,18 @@ function Underwater(){
     ctx.fillStyle="#ffffff";
     ctx.fillRect(0,0,600,600);
     ctx.drawImage(underwater,0,0,600,450);
-    ctx.drawImage(bluefish,300,250,95,47);
+    ctx.drawImage(bluefish,350,285,95,47);
+    ctx.drawImage(seahorse,550,350,30,55);
+    ctx.drawImage(starfish,225,425,38,20);
+    ctx.drawImage(submarine,60,80,120,120);
+    ctx.drawImage(whale,325,30,240,136);
+    ctx.drawImage(jellyfish,500,300,60,46);
+    ctx.drawImage(seaturtle,125,225,96,72);
+    ctx.drawImage(mantaray,250,400,90,36);
     ctx.font = "30px Arial";
     ctx.fillStyle = "#000000";
     ctx.fillText("Find These Items:",0,473);
-    playBedroom();
+    playUnderwater();
 }
 
 function playBeach(){
@@ -149,7 +171,7 @@ function playGarden(){
     ctx.fillText(gameitems[0],0,500);
 
 }
-function playBedroom(){
+function playUnderwater(){
     var bedroomitems = ["blue flower" , "dog" , "doghouse" , "gloves" , "pink flowers" , "blue potted flowers" , "sunflowers" , "tree" , "waateringcan" , "wheelbarrow"];
     var gameitems = [];
     for (i=0 ; i<6 ; i++ ){
