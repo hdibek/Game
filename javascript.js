@@ -146,24 +146,28 @@ function Underwater(){
 }
 
 function playBeach(){
-    var beachItems = ["airplane" , "beachball" , "beachchair" , "dolphin" , "floaty" , "sailboat" , "soccerball" , "speedboat" , "towel" , "umbrella" ];
+    var beachItems = [airplane , beachball , beachchair , dolphin , floaty , sailboat , soccerball , speedboat , towel , umbrella ];
     playGame(beachItems);
 
 }
 function playGarden(){
-    var gardenItems = ["blue flower" , "dog" , "doghouse" , "gloves" , "pink flowers" , "blue potted flowers" , "sunflowers" , "tree" , "waateringcan" , "wheelbarrow"];
+    var gardenItems = [blueflower , dog , doghouse , gloves , pinkpottedflower , pottedflowers , sunflowers , tree , wateringcan , wheelbarrow];
     playGame(gardenItems);
 }
 function playUnderwater(){
-    var underwaterItems = ["angelfish" , "blue fish" , "jellyfish" , "seahorse" , "sea turtle" , "seaweed" , "shell" , "starfish" , "submarine" , "can"];
+    var underwaterItems = [angelfish , bluefish , jellyfish , seahorse , seaturtle , seaweed , shell , starfish , submarine , whale];
     playGame(underwaterItems);
 }
 function playGame(allItems){
     var gameItems = pickGameItems(allItems);
     var ctx = document.getElementById("myCanvas").getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#000000";
-    ctx.fillText(gameItems,0,500);
+    var left = 10;
+    for(i=0;i<gameItems.length;i++) {
+        var proportions = gameItems[i].height/gameItems[i].width;
+        var width = 60/proportions;
+        ctx.drawImage(gameItems[i],left, 500, width, 60);
+        left+= width+10;
+    }
 }
 function pickGameItems(allItems) {
     var gameItems = [];
