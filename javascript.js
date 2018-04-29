@@ -70,10 +70,6 @@ underwater.src = "resources/underwater.png";
 var whale = new Image();
 whale.src = "resources/whale.png";
 
-
-
-
-
 function initialize() {
     var ctx = document.getElementById("myCanvas").getContext("2d");
     ctx.drawImage(Title,0,0,600,600);
