@@ -146,44 +146,31 @@ function Underwater(){
 }
 
 function playBeach(){
-    var beachitems = ["airplane" , "beachball" , "beachchair" , "dolphin" , "floaty" , "sailboat" , "soccerball" , "speedboat" , "towel" , "umbrella" ];
-    var gameitems = [];
-    for (i=0 ; i<6 ; i++ ){
-        var bnum = Math.floor(Math.random() * beachitems.length);
-        gameitems.add(bnum);
-        beachitems.remove(beachitems[bnum]);
-    }
-    var ctx = document.getElementById("myCanvas").getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#000000";
-    ctx.fillText(gameitems[0],0,500);
+    var beachItems = ["airplane" , "beachball" , "beachchair" , "dolphin" , "floaty" , "sailboat" , "soccerball" , "speedboat" , "towel" , "umbrella" ];
+    playGame(beachItems);
 
 }
 function playGarden(){
-    var gardenitems = ["blue flower" , "dog" , "doghouse" , "gloves" , "pink flowers" , "blue potted flowers" , "sunflowers" , "tree" , "waateringcan" , "wheelbarrow"];
-    var gameitems = [];
-    for (i=0 ; i<6 ; i++ ){
-        var bnum = Math.floor(Math.random() * gardenitems.length);
-        gameitems.add(bnum);
-        gardenitems.remove(gardenitems[bnum]);
-    }
-    var ctx = document.getElementById("myCanvas").getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#000000";
-    ctx.fillText(gameitems[0],0,500);
-
+    var gardenItems = ["blue flower" , "dog" , "doghouse" , "gloves" , "pink flowers" , "blue potted flowers" , "sunflowers" , "tree" , "waateringcan" , "wheelbarrow"];
+    playGame(gardenItems);
 }
 function playUnderwater(){
-    var underwateritems = ["angelfish" , "blue fish" , "jellyfish" , "seahorse" , "sea turtle" , "seaweed" , "shell" , "starfish" , "submarine" , "can"];
-    var gameitems = [];
-    for (i=0 ; i<6 ; i++ ){
-        var bnum = Math.floor(Math.random() * underwateritems.length);
-        gameitems.add(bnum);
-        underwateritems.remove(underwateritems[bnum]);
-    }
+    var underwaterItems = ["angelfish" , "blue fish" , "jellyfish" , "seahorse" , "sea turtle" , "seaweed" , "shell" , "starfish" , "submarine" , "can"];
+    playGame(underwaterItems);
+}
+function playGame(allItems){
+    var gameItems = pickGameItems(allItems);
     var ctx = document.getElementById("myCanvas").getContext("2d");
     ctx.font = "30px Arial";
     ctx.fillStyle = "#000000";
-    ctx.fillText(gameitems[0],0,500);
-
+    ctx.fillText(gameItems,0,500);
+}
+function pickGameItems(allItems) {
+    var gameItems = [];
+    for (i = 0; i < 5; i++) {
+        var bnum = Math.floor(Math.random() * allItems.length);
+        gameItems.push(allItems[bnum]);
+        allItems.splice(bnum,1);
+    }
+    return gameItems;
 }
