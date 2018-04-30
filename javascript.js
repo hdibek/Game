@@ -80,6 +80,11 @@ function imageClicked(evt){
         var ctx = document.getElementById("myCanvas").getContext("2d");
         // alert("You clicked: " + whichItemClicked.image.src + " at: " + evt.clientX + "," + evt.clientY);
         ctx.drawImage(checkmark,whichItemClicked.searchX+(whichItemClicked.searchWidth-15)/2,512, 30 , 36);
+        whichItemClicked.found = true;
+        if (gameItems.filter(function(item){return item.found===false}).length === 0){
+            alert("You Win!");
+            initialize();
+        }
     }
 }
 function detectItemClicked(x, y) {
@@ -139,8 +144,7 @@ function Underwater(){
 }
 
 function drawSearchItems(allItems){
-    allItems.forEach(function(item){item.selected = false});//reset from previous game
-
+    allItems.forEach(function(item){item.selected = false;item.found = false});//reset from previous game
     gameItems = pickGameItems(allItems);
     var ctx = document.getElementById("myCanvas").getContext("2d");
     ctx.font = "30px Arial";
@@ -167,3 +171,4 @@ function pickGameItems(allItems) {
     }
     return gameItems;
 }
+
