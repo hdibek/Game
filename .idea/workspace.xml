@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0671a14b-190c-4444-b5aa-a7f3170e93a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.js" afterPath="$PROJECT_DIR$/javascript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -174,7 +173,7 @@
       <workItem from="1524250461795" duration="769000" />
       <workItem from="1524444135882" duration="3831000" />
       <workItem from="1524451918407" duration="1622000" />
-      <workItem from="1525032953573" duration="15186000" />
+      <workItem from="1525032953573" duration="15296000" />
     </task>
     <task id="LOCAL-00001" summary="added more objects to scene 3&#10;scene 1 and 2 are finished">
       <created>1524451994029</created>
@@ -211,11 +210,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525040407000</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="able to click on and detect which item is clicked&#10;when am item is clicked checkmark will appear">
+      <created>1525050849040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525050849040</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42956000" />
+    <option name="totallyTimeSpent" value="43066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -252,7 +258,8 @@
     <MESSAGE value="all images are saved" />
     <MESSAGE value="able to pick items and show text" />
     <MESSAGE value="able to pick items and display below" />
-    <option name="LAST_COMMIT_MESSAGE" value="able to pick items and display below" />
+    <MESSAGE value="able to click on and detect which item is clicked&#10;when am item is clicked checkmark will appear" />
+    <option name="LAST_COMMIT_MESSAGE" value="able to click on and detect which item is clicked&#10;when am item is clicked checkmark will appear" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
